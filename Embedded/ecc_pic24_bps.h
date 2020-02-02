@@ -10,8 +10,19 @@
 #include "queue.h"
 #include "croutine.h"
 
+/*
+ * FRC Oscillator:  8 MHz
+ * FRC Postscaler:  1:1
+ * PLL:             Enable
+ *
+ * Fosc:            32 MHz
+ * Fcy:             16 MHz
+*/
+
 #ifndef _XTAL_FREQ
-#define _XTAL_FREQ 16000000UL
+#define _XTAL_FREQ 16000000UL /*FOSC=32e6, FCY=16e6*/
+#define FOSC (_XTAL_FREQ * 2)
+#define FCY _XTAL_FREQ
 #endif
 
 #define LED0_TRIS TRISAbits.TRISA2
@@ -32,5 +43,15 @@
 void System_Init(void);
 void CLOCK_Initialize(void);
 void IO_Initialize(void);
+
+//
+
+void UART1_Put(char c);
+void UART1_Get(char *c);
+void UART1_Write(char *str);
+
+void UART2_Put(char c);
+void UART2_Get(char *c);
+void UART2_Write(char *str);
 
 #endif // __ECC_PIC24_BSP_H__
