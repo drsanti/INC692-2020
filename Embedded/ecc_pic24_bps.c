@@ -76,6 +76,10 @@ void vApplicationIdleHook(void)
     vCoRoutineSchedule();
 }
 
+void vApplicationTickHook(void)
+{
+}
+
 void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
 {
     (void)pcTaskName;
