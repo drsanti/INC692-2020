@@ -4,18 +4,19 @@
 // Task Code
 void vTask_LED0(void *pvParameters)
 {
-    for (;;)
+    while (1)
     {
-        LED0_LAT = !LED0_LAT;                  // Toggle LED3
-        vTaskDelay(8000 / portTICK_PERIOD_MS); // Wait for .1 seconds
+        LED0_LAT = !LED0_LAT;                                      // Toggle LED3
+        vTaskDelay((TickType_t)pvParameters / portTICK_PERIOD_MS); // Wait for .1 seconds
     }
 }
 void vTask_LED3(void *pvParameters)
 {
+    TickType_t *ticks = (TickType_t *)pvParameters;
     while (1)
     {
-        LED3_LAT = !LED3_LAT;                                         // Toggle LED0
-        vTaskDelay(*((uint32_t *)pvParameters) / portTICK_PERIOD_MS); // Wait for T seconds
+        LED3_LAT = !LED3_LAT;                      // Toggle LED0
+        vTaskDelay((*ticks) / portTICK_PERIOD_MS); // Wait for T seconds
     }
 }
 
@@ -29,8 +30,10 @@ int main(void)
     LED2_LAT = LED3_LAT = 1;
 
     // Create Tasks
-    xTaskCreate(vTask_LED0, NULL, 128, NULL, 0, NULL);
-    xTaskCreate(vTask_LED3, NULL, 128, (void *)100, 0, NULL);
+    xTaskCreate(vTask_LED0, NULL, 128, (void *)20, 0, NULL); // pass a constant value as the parameter
+
+    TickType_t ticks = 50;
+    xTaskCreate(vTask_LED3, NULL, 128, (void *)&ticks, 0, NULL); // pass an address of variable as the parameter
 
     // Start
     vTaskStartScheduler();

@@ -85,12 +85,21 @@ void vApplicationStackOverflowHook(TaskHandle_t pxTask, char *pcTaskName)
     (void)pcTaskName;
     (void)pxTask;
     taskDISABLE_INTERRUPTS();
-    for (;;)
-        ;
+    while (1)
+    {
+    }
 }
 
 void System_Init(void)
 {
     CLOCK_Initialize();
     IO_Initialize();
+
+    //
+    // printf() to UART1
+    //
+    // REF: https://microchipdeveloper.com/faq:74
+
+    __C30_UART = 1; // UART1
+    //__C30_UART = 2; // UART2
 }

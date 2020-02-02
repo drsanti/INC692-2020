@@ -3,6 +3,8 @@
 #define __ECC_PIC24_BSP_H__
 
 #include <xc.h>
+#include <libpic30.h>
+#include <stdio.h>
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
