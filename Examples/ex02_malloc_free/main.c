@@ -5,22 +5,33 @@
 #include <stdlib.h>
 
 // Task Code
+
 void vTask_A(void *pvParameters)
 {
     int counter = 0;
     while (1)
     {
         LED0_LAT = !LED0_LAT; // Toggle LED0
-        vTaskDelay(500 / portTICK_PERIOD_MS);
+        vTaskDelay(10 / portTICK_PERIOD_MS);
 
-        // Allocate memory
-        char *buffer = (char *)malloc(32);
+        // Allocate memory ---------------------
+        char *buffer = (char *)malloc(100 * sizeof(char));
 
-        sprintf(buffer, "Counter: %i\r\n", counter);
-        UART1_Write(buffer);
+        // Check if the memory can be allocated
+        if (buffer != NULL) {
+            // Use the allocated memory
+            sprintf(buffer, "Counter: %i\r\n", counter++);
+            UART1_Write(buffer);
 
-        // Free memory
-        free(buffer);
+            // Free memory
+            free(buffer);   // Try to comment this line to see the error
+
+        }
+        else {
+            // UART1_Write("Error Mem full\r\n");
+            LED3_LAT = 1;
+        }
+        //--------------------------------------
     }
 }
 
