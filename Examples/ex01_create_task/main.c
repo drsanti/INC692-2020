@@ -6,7 +6,7 @@ void vTask_LED0(void *pvParameters)
 {
     while (1)
     {
-        LED0_LAT = !LED0_LAT; // Toggle LED3
+        LED0_LAT = !LED0_LAT; // Toggle LED0
         vTaskDelay((TickType_t)pvParameters / portTICK_PERIOD_MS);
     }
 }
@@ -21,7 +21,7 @@ void vTask_LED3(void *pvParameters)
         sprintf(buff, "counter: %d\r\n", counter++);
         UART1_Write(buff);
 
-        LED3_LAT = !LED3_LAT; // Toggle LED0
+        LED3_LAT = !LED3_LAT; // Toggle LED3
         vTaskDelay((*ticks) / portTICK_PERIOD_MS);
     }
 }
@@ -38,7 +38,7 @@ int main(void)
     // Create Tasks
     xTaskCreate(vTask_LED0, NULL, 128, (void *)500, 0, NULL); // pass a constant value as the parameter
 
-    TickType_t ticks = 50;
+    TickType_t ticks = 200;
     xTaskCreate(vTask_LED3, NULL, 128, (void *)&ticks, 0, NULL); // pass an address of variable as the parameter
 
     // Start

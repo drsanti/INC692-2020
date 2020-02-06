@@ -289,8 +289,7 @@ void Uart2_Init(uint32_t baurate)
 
 void UART1_Put(char c)
 {
-    while (U1STAbits.UTXBF)
-        ;
+    while (U1STAbits.UTXBF);
     U1TXREG = c;
 }
 void UART1_Get(char *c)
@@ -298,16 +297,14 @@ void UART1_Get(char *c)
     if (U1STAbits.OERR != 0)
         U1STAbits.OERR = 0;
 
-    while (!U1STAbits.URXDA)
-        ;
+    while (!U1STAbits.URXDA);
     *c = U1RXREG;
 }
 void UART1_Write(char *str)
 {
     while (*str != 0)
     {
-        while (U1STAbits.UTXBF)
-            ;
+        while (U1STAbits.UTXBF);
         U1TXREG = *str;
         str++;
     }
@@ -315,9 +312,7 @@ void UART1_Write(char *str)
 
 void UART2_Put(char c)
 {
-
-    while (U2STAbits.UTXBF)
-        ;
+    while (U2STAbits.UTXBF);
     U2TXREG = c;
 }
 void UART2_Get(char *c)
