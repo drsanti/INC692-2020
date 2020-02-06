@@ -1,11 +1,9 @@
 // ex02: Dynamic memory allocation
 
 #include "ecc_pic24_bsp.h"
-#include <stdio.h>
-#include <stdlib.h>
+
 
 // Task Code
-
 void vTask_A(void *pvParameters)
 {
     int counter = 0;

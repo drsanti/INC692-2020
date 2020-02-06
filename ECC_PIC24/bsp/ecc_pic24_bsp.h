@@ -5,6 +5,7 @@
 #include <xc.h>
 #include <libpic30.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
