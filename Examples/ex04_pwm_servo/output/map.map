@@ -1,0 +1,1361 @@
+Microchip Technology Inc, v1.50 (A)
+
+Tool Name:
+  c:\ecc-lab\embedded\compilers\xc16\bin\bin\..\bin/elf-ld.exe
+
+Command:
+  -p24FJ48GA002 \
+  -o \
+  ./output/elf.elf \
+  -Lc:/ecc-lab/embedded/compilers/xc16/bin/bin/.. \
+  -Lc:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib \
+  -Lc:/ecc-lab/embedded/compilers/xc16/bin/bin/../../support/PIC24F/gld \
+  ./output/main.o \
+  ./output/hooks.o \
+  ../../ECC_PIC24/libs/ecc_pic24_rtos.a \
+  ../../ECC_PIC24/libs/ecc_pic24_bsp.a \
+  --defsym=__MPLAB_buildD=1 \
+  -T24FJ48GA002_SIM.gld.00 \
+  --heap=3096 \
+  --stack=16 \
+  --check-sections \
+  --data-init \
+  --pack-data \
+  --handles \
+  --isr \
+  --no-gc-sections \
+  --fill-upper=0 \
+  --stackguard=16 \
+  --no-force-link \
+  --smart-io \
+  -Map=./output/map.map \
+  --memorysummary \
+  ./output/mem.xml \
+  -start-group \
+  --library=lega-pic30-elf \
+  --library=m-elf \
+  --library=lega-c-elf \
+  -end-group \
+
+Archive member included because of file (symbol)
+
+../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+                              ./output/hooks.o (_vCoRoutineSchedule)
+../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+                              ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o) (_vListInitialise)
+../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+                              ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o) (_xTaskGetTickCount)
+../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+                              ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o) (_pvPortMalloc)
+../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+                              ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o) (_pxPortInitialiseStack)
+../../ECC_PIC24/libs/ecc_pic24_rtos.a(portasm_PIC24.o)
+                              ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o) (_vPortYield)
+../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+                              ./output/main.o (_MCU_UnlockRegisters)
+
+Optional library libpPIC24Fxxx.a not found
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                              (__resetPRI)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                              c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o) (__data_init_standard)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                              (__crt_start_mode_normal)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
+                              ./output/main.o (___fixunssfsi)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
+                              ./output/main.o (___floatunsisf)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(funpack.eo)
+                              c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo) (__funpack)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
+                              ./output/main.o (___mulsf3)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                              ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o) (___udivsi3)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
+                              c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(floatunsisf.eo) (___floatundisf)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(fpack.eo)
+                              c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(mulsf3.eo) (__fpack)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(funpack2.eo)
+                              c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(mulsf3.eo) (__funpack2)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(futil.eo)
+                              c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(mulsf3.eo) (__fPropagateNaN)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-c-elf.a(memcmp.XX_eo)
+                              ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o) (_memcmp)
+c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
+                              ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o) (_memset)
+
+
+xc16-ld 1.50 (A)
+
+Default Code Model: Small
+Default Data Model: Large
+Default Scalar Model: Small
+
+"program" Memory  [Origin = 0x200, Length = 0x81fc]
+
+section                    address   length (PC units)   length (bytes) (dec)
+-------                    -------   -----------------   --------------------
+.text                        0x200               0x342           0x4e3  (1251)
+.const                       0x542                0x3c            0x5a  (90)
+.text                        0x57e              0x19e0          0x26d0  (9936)
+.dinit                      0x1f5e                0x38            0x54  (84)
+.text                       0x1f96                0x24            0x36  (54)
+
+                 Total "program" memory used (bytes):         0x2c97  (11415) 22%
+
+
+"data" Memory  [Origin = 0x800, Length = 0x2000]
+
+section                    address      alignment gaps    total length  (dec)
+-------                    -------      --------------    -------------------
+.nbss                        0x800                   0            0x38  (56)
+.ndata                       0x838                   0             0x8  (8)
+.bss                         0x840                   0           0xc8c  (3212)
+.heap                       0x14cc                   0           0xc18  (3096)
+
+                 Total "data" memory used (bytes):         0x18e4  (6372) 77%
+
+
+Dynamic Memory Usage
+
+region                     address                      maximum length  (dec)
+------                     -------                      ---------------------
+heap                        0x14cc                               0xc18  (3096)
+stack                       0x20e4                               0x71c  (1820)
+
+                 Maximum dynamic memory (bytes):         0x1334  (4916)
+
+
+External Symbols in Data Memory (by address):
+
+                    0x0800                  _pxCurrentTCB
+                    0x0822                  _pxCurrentCoRoutine
+                    0x0838                  ___dt
+                    0x083a                  ___sf
+                    0x083c                  ___pr
+                    0x083e                  _uxCriticalNesting
+
+External Symbols in Data Memory (by name):
+
+                    0x0838                  ___dt
+                    0x083c                  ___pr
+                    0x083a                  ___sf
+                    0x0822                  _pxCurrentCoRoutine
+                    0x0800                  _pxCurrentTCB
+                    0x083e                  _uxCriticalNesting
+
+External Symbols in Program Memory (by address):
+
+                  0x000200                  __resetPRI
+                  0x00023c                  __psv_init
+                  0x000252                  __data_init_standard
+                  0x000252                  __data_init
+                  0x0002cc                  __T1Interrupt
+                  0x0002fc                  __U1RXInterrupt
+                  0x000310                  __U1TXInterrupt
+                  0x000324                  __U2RXInterrupt
+                  0x000338                  __U2TXInterrupt
+                  0x00034c                  __DefaultInterrupt
+                  0x000352                  ___fixunssfsi
+                  0x000388                  ___floatunsisf
+                  0x00038c                  __funpack
+                  0x0003b6                  ___mulsf3
+                  0x00041e                  ___udivsi3
+                  0x00043e                  ___floatundisf
+                  0x00049c                  __fpack
+                  0x0004e8                  __funpack2
+                  0x0004f8                  __fPropagateNaN
+                  0x00050a                  __fbopExit
+                  0x000512                  __fbopReturnNaN
+                  0x000518                  _memcmp
+                  0x000534                  _memset
+                  0x00057e                  _xTaskCreate
+                  0x000738                  _vTaskDelete
+                  0x0007a2                  _vTaskDelayUntil
+                  0x00081e                  _vTaskDelay
+                  0x000848                  _uxTaskPriorityGet
+                  0x00086a                  _uxTaskPriorityGetFromISR
+                  0x00088c                  _vTaskPrioritySet
+                  0x000954                  _vTaskSuspend
+                  0x0009f8                  _vTaskResume
+                  0x000a56                  _xTaskResumeFromISR
+                  0x000ac0                  _vTaskStartScheduler
+                  0x000af6                  _vTaskEndScheduler
+                  0x000b0e                  _vTaskSuspendAll
+                  0x000b1a                  _xTaskResumeAll
+                  0x000bc4                  _xTaskGetTickCount
+                  0x000bd4                  _xTaskGetTickCountFromISR
+                  0x000be4                  _uxTaskGetNumberOfTasks
+                  0x000bec                  _pcTaskGetName
+                  0x000c06                  _xTaskIncrementTick
+                  0x000cee                  _vTaskSwitchContext
+                  0x000d72                  _vTaskPlaceOnEventList
+                  0x000d8c                  _vTaskPlaceOnUnorderedEventList
+                  0x000db0                  _xTaskRemoveFromEventList
+                  0x000e1e                  _vTaskRemoveFromUnorderedEventList
+                  0x000e72                  _vTaskSetTimeOutState
+                  0x000e8a                  _vTaskInternalSetTimeOutState
+                  0x000e9e                  _xTaskCheckForTimeOut
+                  0x000f0e                  _vTaskMissedYield
+                  0x000f18                  tasks.o:_prvIdleTask
+                  0x000fca                  _uxTaskResetEventItemValue
+                  0x000fe2                  _ulTaskNotifyTake
+                  0x00104e                  _xTaskNotifyWait
+                  0x00110a                  _xTaskGenericNotify
+                  0x0011f2                  _xTaskGenericNotifyFromISR
+                  0x0012f8                  _vTaskNotifyGiveFromISR
+                  0x001380                  _xTaskNotifyStateClear
+                  0x001410                  _MCU_UnlockRegisters
+                  0x001422                  _MCU_LockRegisters
+                  0x001434                  _CLOCK_Initialize
+                  0x001462                  _IO_Initialize
+                  0x00147e                  _Uart1_Init
+                  0x00153a                  _Uart2_Init
+                  0x0015f6                  _UART1_Put
+                  0x00160e                  _UART1_Get
+                  0x001634                  _UART1_Write
+                  0x00165c                  _UART2_Put
+                  0x001674                  _UART2_Get
+                  0x00169a                  _UART2_Write
+                  0x0016c2                  _System_Init
+                  0x0016d8                  _xCoRoutineCreate
+                  0x00176e                  _vCoRoutineAddToDelayedList
+                  0x0018b8                  _vCoRoutineSchedule
+                  0x001958                  _xCoRoutineRemoveFromEventList
+                  0x001990                  _pvPortMalloc
+                  0x001a74                  _vPortFree
+                  0x001ac4                  _xPortGetFreeHeapSize
+                  0x001acc                  _xPortGetMinimumEverFreeHeapSize
+                  0x001ad4                  _vPortInitialiseBlocks
+                  0x001be0                  _vListInitialise
+                  0x001c12                  _vListInitialiseItem
+                  0x001c20                  _vListInsertEnd
+                  0x001c5c                  _vListInsert
+                  0x001cc0                  _uxListRemove
+                  0x001d08                  _pxPortInitialiseStack
+                  0x001d98                  _xPortStartScheduler
+                  0x001dc6                  _vPortEndScheduler
+                  0x001df4                  _vPortEnterCritical
+                  0x001e0e                  _vPortExitCritical
+                  0x001e2a                  _PWM_Init
+                  0x001ef6                  _main
+                  0x001f0e                  _vPortYield
+                  0x001f96                  _vApplicationIdleHook
+                  0x001f9e                  _vApplicationTickHook
+                  0x001fa4                  _vApplicationStackOverflowHook
+
+External Symbols in Program Memory (by name):
+
+                  0x001434                  _CLOCK_Initialize
+                  0x001462                  _IO_Initialize
+                  0x001422                  _MCU_LockRegisters
+                  0x001410                  _MCU_UnlockRegisters
+                  0x001e2a                  _PWM_Init
+                  0x0016c2                  _System_Init
+                  0x00160e                  _UART1_Get
+                  0x0015f6                  _UART1_Put
+                  0x001634                  _UART1_Write
+                  0x001674                  _UART2_Get
+                  0x00165c                  _UART2_Put
+                  0x00169a                  _UART2_Write
+                  0x00147e                  _Uart1_Init
+                  0x00153a                  _Uart2_Init
+                  0x00034c                  __DefaultInterrupt
+                  0x0002cc                  __T1Interrupt
+                  0x0002fc                  __U1RXInterrupt
+                  0x000310                  __U1TXInterrupt
+                  0x000324                  __U2RXInterrupt
+                  0x000338                  __U2TXInterrupt
+                  0x000352                  ___fixunssfsi
+                  0x00043e                  ___floatundisf
+                  0x000388                  ___floatunsisf
+                  0x0003b6                  ___mulsf3
+                  0x00041e                  ___udivsi3
+                  0x000252                  __data_init
+                  0x000252                  __data_init_standard
+                  0x0004f8                  __fPropagateNaN
+                  0x00050a                  __fbopExit
+                  0x000512                  __fbopReturnNaN
+                  0x00049c                  __fpack
+                  0x00038c                  __funpack
+                  0x0004e8                  __funpack2
+                  0x00023c                  __psv_init
+                  0x000200                  __resetPRI
+                  0x001ef6                  _main
+                  0x000518                  _memcmp
+                  0x000534                  _memset
+                  0x000bec                  _pcTaskGetName
+                  0x001990                  _pvPortMalloc
+                  0x001d08                  _pxPortInitialiseStack
+                  0x000fe2                  _ulTaskNotifyTake
+                  0x001cc0                  _uxListRemove
+                  0x000be4                  _uxTaskGetNumberOfTasks
+                  0x000848                  _uxTaskPriorityGet
+                  0x00086a                  _uxTaskPriorityGetFromISR
+                  0x000fca                  _uxTaskResetEventItemValue
+                  0x001f96                  _vApplicationIdleHook
+                  0x001fa4                  _vApplicationStackOverflowHook
+                  0x001f9e                  _vApplicationTickHook
+                  0x00176e                  _vCoRoutineAddToDelayedList
+                  0x0018b8                  _vCoRoutineSchedule
+                  0x001be0                  _vListInitialise
+                  0x001c12                  _vListInitialiseItem
+                  0x001c5c                  _vListInsert
+                  0x001c20                  _vListInsertEnd
+                  0x001dc6                  _vPortEndScheduler
+                  0x001df4                  _vPortEnterCritical
+                  0x001e0e                  _vPortExitCritical
+                  0x001a74                  _vPortFree
+                  0x001ad4                  _vPortInitialiseBlocks
+                  0x001f0e                  _vPortYield
+                  0x00081e                  _vTaskDelay
+                  0x0007a2                  _vTaskDelayUntil
+                  0x000738                  _vTaskDelete
+                  0x000af6                  _vTaskEndScheduler
+                  0x000e8a                  _vTaskInternalSetTimeOutState
+                  0x000f0e                  _vTaskMissedYield
+                  0x0012f8                  _vTaskNotifyGiveFromISR
+                  0x000d72                  _vTaskPlaceOnEventList
+                  0x000d8c                  _vTaskPlaceOnUnorderedEventList
+                  0x00088c                  _vTaskPrioritySet
+                  0x000e1e                  _vTaskRemoveFromUnorderedEventList
+                  0x0009f8                  _vTaskResume
+                  0x000e72                  _vTaskSetTimeOutState
+                  0x000ac0                  _vTaskStartScheduler
+                  0x000954                  _vTaskSuspend
+                  0x000b0e                  _vTaskSuspendAll
+                  0x000cee                  _vTaskSwitchContext
+                  0x0016d8                  _xCoRoutineCreate
+                  0x001958                  _xCoRoutineRemoveFromEventList
+                  0x001ac4                  _xPortGetFreeHeapSize
+                  0x001acc                  _xPortGetMinimumEverFreeHeapSize
+                  0x001d98                  _xPortStartScheduler
+                  0x000e9e                  _xTaskCheckForTimeOut
+                  0x00057e                  _xTaskCreate
+                  0x00110a                  _xTaskGenericNotify
+                  0x0011f2                  _xTaskGenericNotifyFromISR
+                  0x000bc4                  _xTaskGetTickCount
+                  0x000bd4                  _xTaskGetTickCountFromISR
+                  0x000c06                  _xTaskIncrementTick
+                  0x001380                  _xTaskNotifyStateClear
+                  0x00104e                  _xTaskNotifyWait
+                  0x000db0                  _xTaskRemoveFromEventList
+                  0x000b1a                  _xTaskResumeAll
+                  0x000a56                  _xTaskResumeFromISR
+                  0x000f18                  tasks.o:_prvIdleTask
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+data             0x000800           0x002000           a !xr
+reset            0x000000           0x000004  
+ivt              0x000004           0x0000fc  
+_reserved        0x000100           0x000004  
+aivt             0x000104           0x0000fc  
+program          0x000200           0x0081fc           xr
+CONFIG2          0x0083fc           0x000002  
+CONFIG1          0x0083fe           0x000002  
+*default*        0x000000           0xffffffff  
+
+Linker script and memory map
+
+LOAD ./output/main.o
+LOAD ./output/hooks.o
+LOAD ../../ECC_PIC24/libs/ecc_pic24_rtos.a
+LOAD ../../ECC_PIC24/libs/ecc_pic24_bsp.a
+                    0x0001                  __MPLAB_buildD = 0x1
+LOAD pPIC24Fxxx
+LOAD c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libfx-elf.a
+                    0x83fc                  __CONFIG2 = 0x83fc
+                    0x83fe                  __CONFIG1 = 0x83fe
+                    0x0001                  __NO_HANDLES = 0x1
+                    0x0200                  __CODE_BASE = 0x200
+                    0x81fc                  __CODE_LENGTH = 0x81fc
+                    0x0004                  __IVT_BASE = 0x4
+                    0x0104                  __AIVT_BASE = 0x104
+                    0x0800                  __DATA_BASE = 0x800
+                    0x2000                  __DATA_LENGTH = 0x2000
+
+.reset            0x000000          0x4
+                  0x000000          0x2 SHORT 0x200 ABSOLUTE (__reset)
+                  0x000001          0x2 SHORT 0x4
+                  0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
+                  0x000003          0x2 SHORT 0x0
+
+.text             0x000200        0x342
+ *(.init)
+ .init            0x000200         0x4c c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+                  0x000200                  __resetPRI
+                  0x000200                  __reset
+                  0x00023c                  __psv_init
+ .init            0x00024c         0x7c c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+                  0x000252                  __data_init_standard
+                  0x000252                  __data_init
+ *(.user_init)
+ *(.handle)
+ *(.isr*)
+ .isr.text        0x0002cc         0x30 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+                  0x0002cc                  __T1Interrupt
+ .isr.text        0x0002fc         0x50 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+                  0x0002fc                  __U1RXInterrupt
+                  0x000310                  __U1TXInterrupt
+                  0x000324                  __U2RXInterrupt
+                  0x000338                  __U2TXInterrupt
+ .isr             0x00034c          0x4 default_isr
+                  0x00034c                  __DefaultInterrupt
+ *(.libc)
+ *(.libm)
+ *(.libdsp)
+ *(.lib*)
+ .libpic30_crt_start_mode
+                  0x000350          0x2 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x000350                  __crt_start_mode
+                  0x000350                  __crt_start_mode_normal
+ .libm.fixunssfsi
+                  0x000352         0x36 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
+                  0x000352                  ___fixunssfsi
+ .libm.floatunsisf
+                  0x000388          0x4 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
+                  0x000388                  ___floatunsisf
+ .libm.funpack    0x00038c         0x2a c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(funpack.eo)
+                  0x00038c                  __funpack
+ .libm.mulsf3     0x0003b6         0x68 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
+                  0x0003b6                  ___mulsf3
+ .libm.udivsi3    0x00041e         0x20 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+                  0x00041e                  ___udivsi3
+ .libm.floatundisf
+                  0x00043e         0x5e c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
+                  0x00043e                  ___floatundisf
+ .libm.fpack      0x00049c         0x4c c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(fpack.eo)
+                  0x00049c                  __fpack
+ .libm.funpack2
+                  0x0004e8         0x10 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(funpack2.eo)
+                  0x0004e8                  __funpack2
+ .libm.fPropagateNaN
+                  0x0004f8         0x12 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x0004f8                  __fPropagateNaN
+ .libm.fbobExit
+                  0x00050a          0x8 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x00050a                  __fbopExit
+ .libm.fbopReturnNaN
+                  0x000512          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(futil.eo)
+                  0x000512                  __fbopReturnNaN
+ .libc.memcmp     0x000518         0x1c c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-c-elf.a(memcmp.XX_eo)
+                  0x000518                  _memcmp
+ .libc.memset     0x000534          0xe c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
+                  0x000534                  _memset
+
+usercode
+ *(usercode)
+
+__CONFIG2
+ *(__CONFIG2.sec*)
+
+__CONFIG1
+ *(__CONFIG1.sec*)
+
+.comment
+ *(.comment)
+
+.debug_info       0x000000       0x6682
+ *(.debug_info)
+ .debug_info      0x000000        0xf60 ./output/main.o
+ .debug_info      0x000f60        0x34c ./output/hooks.o
+ .debug_info      0x0012ac        0x93c ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_info      0x001be8        0x466 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_info      0x00204e       0x1bad ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_info      0x003bfb        0x544 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_info      0x00413f        0xb26 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_info      0x004c65       0x1a1d ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev     0x000000        0xbab
+ *(.debug_abbrev)
+ .debug_abbrev    0x000000        0x113 ./output/main.o
+ .debug_abbrev    0x000113         0xdf ./output/hooks.o
+ .debug_abbrev    0x0001f2        0x207 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_abbrev    0x0003f9         0xe1 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_abbrev    0x0004da        0x235 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_abbrev    0x00070f        0x120 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_abbrev    0x00082f        0x1e3 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_abbrev    0x000a12        0x199 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.debug_line       0x000000        0xeea
+ *(.debug_line)
+ .debug_line      0x000000        0x101 ./output/main.o
+ .debug_line      0x000101        0x10d ./output/hooks.o
+ .debug_line      0x00020e        0x20d ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_line      0x00041b        0x154 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_line      0x00056f        0x4de ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_line      0x000a4d        0x140 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_line      0x000b8d        0x1b3 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_line      0x000d40        0x1aa ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.debug_frame      0x000000        0xac2
+ *(.debug_frame)
+ .debug_frame     0x000000         0x48 ./output/main.o
+ .debug_frame     0x000048         0x62 ./output/hooks.o
+ .debug_frame     0x0000aa         0xd8 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_frame     0x000182         0xa0 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_frame     0x000222        0x4f2 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_frame     0x000714         0xd8 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_frame     0x0007ec        0x100 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_frame     0x0008ec        0x1d6 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.debug_str        0x000000        0x353
+ *(.debug_str)
+ .debug_str       0x000000         0x7a ./output/main.o
+ .debug_str       0x00007a         0x50 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_str       0x0000ca         0x2b ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_str       0x0000f5        0x174 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_str       0x000269         0x37 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_str       0x0002a0         0xb3 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_pubnames
+                  0x000000        0x7aa
+ *(.debug_pubnames)
+ .debug_pubnames
+                  0x000000         0x43 ./output/main.o
+ .debug_pubnames
+                  0x000043         0x66 ./output/hooks.o
+ .debug_pubnames
+                  0x0000a9         0x96 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_pubnames
+                  0x00013f         0x72 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_pubnames
+                  0x0001b1        0x362 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_pubnames
+                  0x000513         0x88 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_pubnames
+                  0x00059b         0xd6 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_pubnames
+                  0x000671        0x139 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_aranges    0x000000         0xc0
+ *(.debug_aranges)
+ .debug_aranges
+                  0x000000         0x18 ./output/main.o
+ .debug_aranges
+                  0x000018         0x18 ./output/hooks.o
+ .debug_aranges
+                  0x000030         0x18 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_aranges
+                  0x000048         0x18 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_aranges
+                  0x000060         0x18 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_aranges
+                  0x000078         0x18 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_aranges
+                  0x000090         0x18 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_aranges
+                  0x0000a8         0x18 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+                    0x0000                  WREG0 = 0x0
+                    0x0000                  _WREG0 = 0x0
+                    0x0002                  WREG1 = 0x2
+                    0x0002                  _WREG1 = 0x2
+                    0x0004                  WREG2 = 0x4
+                    0x0004                  _WREG2 = 0x4
+                    0x0006                  WREG3 = 0x6
+                    0x0006                  _WREG3 = 0x6
+                    0x0008                  WREG4 = 0x8
+                    0x0008                  _WREG4 = 0x8
+                    0x000a                  WREG5 = 0xa
+                    0x000a                  _WREG5 = 0xa
+                    0x000c                  WREG6 = 0xc
+                    0x000c                  _WREG6 = 0xc
+                    0x000e                  WREG7 = 0xe
+                    0x000e                  _WREG7 = 0xe
+                    0x0010                  WREG8 = 0x10
+                    0x0010                  _WREG8 = 0x10
+                    0x0012                  WREG9 = 0x12
+                    0x0012                  _WREG9 = 0x12
+                    0x0014                  WREG10 = 0x14
+                    0x0014                  _WREG10 = 0x14
+                    0x0016                  WREG11 = 0x16
+                    0x0016                  _WREG11 = 0x16
+                    0x0018                  WREG12 = 0x18
+                    0x0018                  _WREG12 = 0x18
+                    0x001a                  WREG13 = 0x1a
+                    0x001a                  _WREG13 = 0x1a
+                    0x001c                  WREG14 = 0x1c
+                    0x001c                  _WREG14 = 0x1c
+                    0x001e                  WREG15 = 0x1e
+                    0x001e                  _WREG15 = 0x1e
+                    0x0020                  SPLIM = 0x20
+                    0x0020                  _SPLIM = 0x20
+                    0x002e                  PCL = 0x2e
+                    0x002e                  _PCL = 0x2e
+                    0x0030                  PCH = 0x30
+                    0x0030                  _PCH = 0x30
+                    0x0032                  TBLPAG = 0x32
+                    0x0032                  _TBLPAG = 0x32
+                    0x0034                  PSVPAG = 0x34
+                    0x0034                  _PSVPAG = 0x34
+                    0x0036                  RCOUNT = 0x36
+                    0x0036                  _RCOUNT = 0x36
+                    0x0042                  SR = 0x42
+                    0x0042                  _SR = 0x42
+                    0x0042                  _SRbits = 0x42
+                    0x0044                  CORCON = 0x44
+                    0x0044                  _CORCON = 0x44
+                    0x0044                  _CORCONbits = 0x44
+                    0x0052                  DISICNT = 0x52
+                    0x0052                  _DISICNT = 0x52
+                    0x0060                  CNEN1 = 0x60
+                    0x0060                  _CNEN1 = 0x60
+                    0x0060                  _CNEN1bits = 0x60
+                    0x0062                  CNEN2 = 0x62
+                    0x0062                  _CNEN2 = 0x62
+                    0x0062                  _CNEN2bits = 0x62
+                    0x0068                  CNPU1 = 0x68
+                    0x0068                  _CNPU1 = 0x68
+                    0x0068                  _CNPU1bits = 0x68
+                    0x006a                  CNPU2 = 0x6a
+                    0x006a                  _CNPU2 = 0x6a
+                    0x006a                  _CNPU2bits = 0x6a
+                    0x0080                  INTCON1 = 0x80
+                    0x0080                  _INTCON1 = 0x80
+                    0x0080                  _INTCON1bits = 0x80
+                    0x0082                  INTCON2 = 0x82
+                    0x0082                  _INTCON2 = 0x82
+                    0x0082                  _INTCON2bits = 0x82
+                    0x0084                  IFS0 = 0x84
+                    0x0084                  _IFS0 = 0x84
+                    0x0084                  _IFS0bits = 0x84
+                    0x0086                  IFS1 = 0x86
+                    0x0086                  _IFS1 = 0x86
+                    0x0086                  _IFS1bits = 0x86
+                    0x0088                  IFS2 = 0x88
+                    0x0088                  _IFS2 = 0x88
+                    0x0088                  _IFS2bits = 0x88
+                    0x008a                  IFS3 = 0x8a
+                    0x008a                  _IFS3 = 0x8a
+                    0x008a                  _IFS3bits = 0x8a
+                    0x008c                  IFS4 = 0x8c
+                    0x008c                  _IFS4 = 0x8c
+                    0x008c                  _IFS4bits = 0x8c
+                    0x0094                  IEC0 = 0x94
+                    0x0094                  _IEC0 = 0x94
+                    0x0094                  _IEC0bits = 0x94
+                    0x0096                  IEC1 = 0x96
+                    0x0096                  _IEC1 = 0x96
+                    0x0096                  _IEC1bits = 0x96
+                    0x0098                  IEC2 = 0x98
+                    0x0098                  _IEC2 = 0x98
+                    0x0098                  _IEC2bits = 0x98
+                    0x009a                  IEC3 = 0x9a
+                    0x009a                  _IEC3 = 0x9a
+                    0x009a                  _IEC3bits = 0x9a
+                    0x009c                  IEC4 = 0x9c
+                    0x009c                  _IEC4 = 0x9c
+                    0x009c                  _IEC4bits = 0x9c
+                    0x00a4                  IPC0 = 0xa4
+                    0x00a4                  _IPC0 = 0xa4
+                    0x00a4                  _IPC0bits = 0xa4
+                    0x00a6                  IPC1 = 0xa6
+                    0x00a6                  _IPC1 = 0xa6
+                    0x00a6                  _IPC1bits = 0xa6
+                    0x00a8                  IPC2 = 0xa8
+                    0x00a8                  _IPC2 = 0xa8
+                    0x00a8                  _IPC2bits = 0xa8
+                    0x00aa                  IPC3 = 0xaa
+                    0x00aa                  _IPC3 = 0xaa
+                    0x00aa                  _IPC3bits = 0xaa
+                    0x00ac                  IPC4 = 0xac
+                    0x00ac                  _IPC4 = 0xac
+                    0x00ac                  _IPC4bits = 0xac
+                    0x00ae                  IPC5 = 0xae
+                    0x00ae                  _IPC5 = 0xae
+                    0x00ae                  _IPC5bits = 0xae
+                    0x00b0                  IPC6 = 0xb0
+                    0x00b0                  _IPC6 = 0xb0
+                    0x00b0                  _IPC6bits = 0xb0
+                    0x00b2                  IPC7 = 0xb2
+                    0x00b2                  _IPC7 = 0xb2
+                    0x00b2                  _IPC7bits = 0xb2
+                    0x00b4                  IPC8 = 0xb4
+                    0x00b4                  _IPC8 = 0xb4
+                    0x00b4                  _IPC8bits = 0xb4
+                    0x00b6                  IPC9 = 0xb6
+                    0x00b6                  _IPC9 = 0xb6
+                    0x00b6                  _IPC9bits = 0xb6
+                    0x00b8                  IPC10 = 0xb8
+                    0x00b8                  _IPC10 = 0xb8
+                    0x00b8                  _IPC10bits = 0xb8
+                    0x00ba                  IPC11 = 0xba
+                    0x00ba                  _IPC11 = 0xba
+                    0x00ba                  _IPC11bits = 0xba
+                    0x00bc                  IPC12 = 0xbc
+                    0x00bc                  _IPC12 = 0xbc
+                    0x00bc                  _IPC12bits = 0xbc
+                    0x00c2                  IPC15 = 0xc2
+                    0x00c2                  _IPC15 = 0xc2
+                    0x00c2                  _IPC15bits = 0xc2
+                    0x00c4                  IPC16 = 0xc4
+                    0x00c4                  _IPC16 = 0xc4
+                    0x00c4                  _IPC16bits = 0xc4
+                    0x00c8                  IPC18 = 0xc8
+                    0x00c8                  _IPC18 = 0xc8
+                    0x00c8                  _IPC18bits = 0xc8
+                    0x0100                  TMR1 = 0x100
+                    0x0100                  _TMR1 = 0x100
+                    0x0102                  PR1 = 0x102
+                    0x0102                  _PR1 = 0x102
+                    0x0104                  T1CON = 0x104
+                    0x0104                  _T1CON = 0x104
+                    0x0104                  _T1CONbits = 0x104
+                    0x0106                  TMR2 = 0x106
+                    0x0106                  _TMR2 = 0x106
+                    0x0108                  TMR3HLD = 0x108
+                    0x0108                  _TMR3HLD = 0x108
+                    0x010a                  TMR3 = 0x10a
+                    0x010a                  _TMR3 = 0x10a
+                    0x010c                  PR2 = 0x10c
+                    0x010c                  _PR2 = 0x10c
+                    0x010e                  PR3 = 0x10e
+                    0x010e                  _PR3 = 0x10e
+                    0x0110                  T2CON = 0x110
+                    0x0110                  _T2CON = 0x110
+                    0x0110                  _T2CONbits = 0x110
+                    0x0112                  T3CON = 0x112
+                    0x0112                  _T3CON = 0x112
+                    0x0112                  _T3CONbits = 0x112
+                    0x0114                  TMR4 = 0x114
+                    0x0114                  _TMR4 = 0x114
+                    0x0116                  TMR5HLD = 0x116
+                    0x0116                  _TMR5HLD = 0x116
+                    0x0118                  TMR5 = 0x118
+                    0x0118                  _TMR5 = 0x118
+                    0x011a                  PR4 = 0x11a
+                    0x011a                  _PR4 = 0x11a
+                    0x011c                  PR5 = 0x11c
+                    0x011c                  _PR5 = 0x11c
+                    0x011e                  T4CON = 0x11e
+                    0x011e                  _T4CON = 0x11e
+                    0x011e                  _T4CONbits = 0x11e
+                    0x0120                  T5CON = 0x120
+                    0x0120                  _T5CON = 0x120
+                    0x0120                  _T5CONbits = 0x120
+                    0x0140                  IC1BUF = 0x140
+                    0x0140                  _IC1BUF = 0x140
+                    0x0142                  IC1CON = 0x142
+                    0x0142                  _IC1CON = 0x142
+                    0x0142                  _IC1CONbits = 0x142
+                    0x0144                  IC2BUF = 0x144
+                    0x0144                  _IC2BUF = 0x144
+                    0x0146                  IC2CON = 0x146
+                    0x0146                  _IC2CON = 0x146
+                    0x0146                  _IC2CONbits = 0x146
+                    0x0148                  IC3BUF = 0x148
+                    0x0148                  _IC3BUF = 0x148
+                    0x014a                  IC3CON = 0x14a
+                    0x014a                  _IC3CON = 0x14a
+                    0x014a                  _IC3CONbits = 0x14a
+                    0x014c                  IC4BUF = 0x14c
+                    0x014c                  _IC4BUF = 0x14c
+                    0x014e                  IC4CON = 0x14e
+                    0x014e                  _IC4CON = 0x14e
+                    0x014e                  _IC4CONbits = 0x14e
+                    0x0150                  IC5BUF = 0x150
+                    0x0150                  _IC5BUF = 0x150
+                    0x0152                  IC5CON = 0x152
+                    0x0152                  _IC5CON = 0x152
+                    0x0152                  _IC5CONbits = 0x152
+                    0x0180                  OC1RS = 0x180
+                    0x0180                  _OC1RS = 0x180
+                    0x0182                  OC1R = 0x182
+                    0x0182                  _OC1R = 0x182
+                    0x0184                  OC1CON = 0x184
+                    0x0184                  _OC1CON = 0x184
+                    0x0184                  _OC1CONbits = 0x184
+                    0x0186                  OC2RS = 0x186
+                    0x0186                  _OC2RS = 0x186
+                    0x0188                  OC2R = 0x188
+                    0x0188                  _OC2R = 0x188
+                    0x018a                  OC2CON = 0x18a
+                    0x018a                  _OC2CON = 0x18a
+                    0x018a                  _OC2CONbits = 0x18a
+                    0x018c                  OC3RS = 0x18c
+                    0x018c                  _OC3RS = 0x18c
+                    0x018e                  OC3R = 0x18e
+                    0x018e                  _OC3R = 0x18e
+                    0x0190                  OC3CON = 0x190
+                    0x0190                  _OC3CON = 0x190
+                    0x0190                  _OC3CONbits = 0x190
+                    0x0192                  OC4RS = 0x192
+                    0x0192                  _OC4RS = 0x192
+                    0x0194                  OC4R = 0x194
+                    0x0194                  _OC4R = 0x194
+                    0x0196                  OC4CON = 0x196
+                    0x0196                  _OC4CON = 0x196
+                    0x0196                  _OC4CONbits = 0x196
+                    0x0198                  OC5RS = 0x198
+                    0x0198                  _OC5RS = 0x198
+                    0x019a                  OC5R = 0x19a
+                    0x019a                  _OC5R = 0x19a
+                    0x019c                  OC5CON = 0x19c
+                    0x019c                  _OC5CON = 0x19c
+                    0x019c                  _OC5CONbits = 0x19c
+                    0x0200                  I2C1RCV = 0x200
+                    0x0200                  _I2C1RCV = 0x200
+                    0x0202                  I2C1TRN = 0x202
+                    0x0202                  _I2C1TRN = 0x202
+                    0x0204                  I2C1BRG = 0x204
+                    0x0204                  _I2C1BRG = 0x204
+                    0x0206                  I2C1CON = 0x206
+                    0x0206                  _I2C1CON = 0x206
+                    0x0206                  _I2C1CONbits = 0x206
+                    0x0208                  I2C1STAT = 0x208
+                    0x0208                  _I2C1STAT = 0x208
+                    0x0208                  _I2C1STATbits = 0x208
+                    0x020a                  I2C1ADD = 0x20a
+                    0x020a                  _I2C1ADD = 0x20a
+                    0x020c                  I2C1MSK = 0x20c
+                    0x020c                  _I2C1MSK = 0x20c
+                    0x0210                  I2C2RCV = 0x210
+                    0x0210                  _I2C2RCV = 0x210
+                    0x0212                  I2C2TRN = 0x212
+                    0x0212                  _I2C2TRN = 0x212
+                    0x0214                  I2C2BRG = 0x214
+                    0x0214                  _I2C2BRG = 0x214
+                    0x0216                  I2C2CON = 0x216
+                    0x0216                  _I2C2CON = 0x216
+                    0x0216                  _I2C2CONbits = 0x216
+                    0x0218                  I2C2STAT = 0x218
+                    0x0218                  _I2C2STAT = 0x218
+                    0x0218                  _I2C2STATbits = 0x218
+                    0x021a                  I2C2ADD = 0x21a
+                    0x021a                  _I2C2ADD = 0x21a
+                    0x021c                  I2C2MSK = 0x21c
+                    0x021c                  _I2C2MSK = 0x21c
+                    0x0220                  U1MODE = 0x220
+                    0x0220                  _U1MODE = 0x220
+                    0x0220                  _U1MODEbits = 0x220
+                    0x0222                  U1STA = 0x222
+                    0x0222                  _U1STA = 0x222
+                    0x0222                  _U1STAbits = 0x222
+                    0x0224                  U1TXREG = 0x224
+                    0x0224                  _U1TXREG = 0x224
+                    0x0226                  U1RXREG = 0x226
+                    0x0226                  _U1RXREG = 0x226
+                    0x0228                  U1BRG = 0x228
+                    0x0228                  _U1BRG = 0x228
+                    0x0230                  U2MODE = 0x230
+                    0x0230                  _U2MODE = 0x230
+                    0x0230                  _U2MODEbits = 0x230
+                    0x0232                  U2STA = 0x232
+                    0x0232                  _U2STA = 0x232
+                    0x0232                  _U2STAbits = 0x232
+                    0x0234                  U2TXREG = 0x234
+                    0x0234                  _U2TXREG = 0x234
+                    0x0236                  U2RXREG = 0x236
+                    0x0236                  _U2RXREG = 0x236
+                    0x0238                  U2BRG = 0x238
+                    0x0238                  _U2BRG = 0x238
+                    0x0240                  SPI1STAT = 0x240
+                    0x0240                  _SPI1STAT = 0x240
+                    0x0240                  _SPI1STATbits = 0x240
+                    0x0242                  SPI1CON1 = 0x242
+                    0x0242                  _SPI1CON1 = 0x242
+                    0x0242                  _SPI1CON1bits = 0x242
+                    0x0244                  SPI1CON2 = 0x244
+                    0x0244                  _SPI1CON2 = 0x244
+                    0x0244                  _SPI1CON2bits = 0x244
+                    0x0248                  SPI1BUF = 0x248
+                    0x0248                  _SPI1BUF = 0x248
+                    0x0260                  SPI2STAT = 0x260
+                    0x0260                  _SPI2STAT = 0x260
+                    0x0260                  _SPI2STATbits = 0x260
+                    0x0262                  SPI2CON1 = 0x262
+                    0x0262                  _SPI2CON1 = 0x262
+                    0x0262                  _SPI2CON1bits = 0x262
+                    0x0264                  SPI2CON2 = 0x264
+                    0x0264                  _SPI2CON2 = 0x264
+                    0x0264                  _SPI2CON2bits = 0x264
+                    0x0268                  SPI2BUF = 0x268
+                    0x0268                  _SPI2BUF = 0x268
+                    0x02c0                  TRISA = 0x2c0
+                    0x02c0                  _TRISA = 0x2c0
+                    0x02c0                  _TRISAbits = 0x2c0
+                    0x02c2                  PORTA = 0x2c2
+                    0x02c2                  _PORTA = 0x2c2
+                    0x02c2                  _PORTAbits = 0x2c2
+                    0x02c4                  LATA = 0x2c4
+                    0x02c4                  _LATA = 0x2c4
+                    0x02c4                  _LATAbits = 0x2c4
+                    0x02c6                  ODCA = 0x2c6
+                    0x02c6                  _ODCA = 0x2c6
+                    0x02c6                  _ODCAbits = 0x2c6
+                    0x02c8                  TRISB = 0x2c8
+                    0x02c8                  _TRISB = 0x2c8
+                    0x02c8                  _TRISBbits = 0x2c8
+                    0x02ca                  PORTB = 0x2ca
+                    0x02ca                  _PORTB = 0x2ca
+                    0x02ca                  _PORTBbits = 0x2ca
+                    0x02cc                  LATB = 0x2cc
+                    0x02cc                  _LATB = 0x2cc
+                    0x02cc                  _LATBbits = 0x2cc
+                    0x02ce                  ODCB = 0x2ce
+                    0x02ce                  _ODCB = 0x2ce
+                    0x02ce                  _ODCBbits = 0x2ce
+                    0x02fc                  PADCFG1 = 0x2fc
+                    0x02fc                  _PADCFG1 = 0x2fc
+                    0x02fc                  _PADCFG1bits = 0x2fc
+                    0x0300                  ADC1BUF0 = 0x300
+                    0x0300                  _ADC1BUF0 = 0x300
+                    0x0302                  ADC1BUF1 = 0x302
+                    0x0302                  _ADC1BUF1 = 0x302
+                    0x0304                  ADC1BUF2 = 0x304
+                    0x0304                  _ADC1BUF2 = 0x304
+                    0x0306                  ADC1BUF3 = 0x306
+                    0x0306                  _ADC1BUF3 = 0x306
+                    0x0308                  ADC1BUF4 = 0x308
+                    0x0308                  _ADC1BUF4 = 0x308
+                    0x030a                  ADC1BUF5 = 0x30a
+                    0x030a                  _ADC1BUF5 = 0x30a
+                    0x030c                  ADC1BUF6 = 0x30c
+                    0x030c                  _ADC1BUF6 = 0x30c
+                    0x030e                  ADC1BUF7 = 0x30e
+                    0x030e                  _ADC1BUF7 = 0x30e
+                    0x0310                  ADC1BUF8 = 0x310
+                    0x0310                  _ADC1BUF8 = 0x310
+                    0x0312                  ADC1BUF9 = 0x312
+                    0x0312                  _ADC1BUF9 = 0x312
+                    0x0314                  ADC1BUFA = 0x314
+                    0x0314                  _ADC1BUFA = 0x314
+                    0x0316                  ADC1BUFB = 0x316
+                    0x0316                  _ADC1BUFB = 0x316
+                    0x0318                  ADC1BUFC = 0x318
+                    0x0318                  _ADC1BUFC = 0x318
+                    0x031a                  ADC1BUFD = 0x31a
+                    0x031a                  _ADC1BUFD = 0x31a
+                    0x031c                  ADC1BUFE = 0x31c
+                    0x031c                  _ADC1BUFE = 0x31c
+                    0x031e                  ADC1BUFF = 0x31e
+                    0x031e                  _ADC1BUFF = 0x31e
+                    0x0320                  AD1CON1 = 0x320
+                    0x0320                  _AD1CON1 = 0x320
+                    0x0320                  _AD1CON1bits = 0x320
+                    0x0322                  AD1CON2 = 0x322
+                    0x0322                  _AD1CON2 = 0x322
+                    0x0322                  _AD1CON2bits = 0x322
+                    0x0324                  AD1CON3 = 0x324
+                    0x0324                  _AD1CON3 = 0x324
+                    0x0324                  _AD1CON3bits = 0x324
+                    0x0328                  AD1CHS = 0x328
+                    0x0328                  _AD1CHS = 0x328
+                    0x0328                  _AD1CHSbits = 0x328
+                    0x032c                  AD1PCFG = 0x32c
+                    0x032c                  _AD1PCFG = 0x32c
+                    0x032c                  _AD1PCFGbits = 0x32c
+                    0x0330                  AD1CSSL = 0x330
+                    0x0330                  _AD1CSSL = 0x330
+                    0x0330                  _AD1CSSLbits = 0x330
+                    0x0600                  PMCON = 0x600
+                    0x0600                  _PMCON = 0x600
+                    0x0600                  _PMCONbits = 0x600
+                    0x0602                  PMMODE = 0x602
+                    0x0602                  _PMMODE = 0x602
+                    0x0602                  _PMMODEbits = 0x602
+                    0x0604                  PMADDR = 0x604
+                    0x0604                  _PMADDR = 0x604
+                    0x0604                  _PMADDRbits = 0x604
+                    0x0604                  PMDOUT1 = 0x604
+                    0x0604                  _PMDOUT1 = 0x604
+                    0x0604                  _PMDOUT1bits = 0x604
+                    0x0606                  PMDOUT2 = 0x606
+                    0x0606                  _PMDOUT2 = 0x606
+                    0x0608                  PMDIN1 = 0x608
+                    0x0608                  _PMDIN1 = 0x608
+                    0x060a                  PMDIN2 = 0x60a
+                    0x060a                  _PMDIN2 = 0x60a
+                    0x060c                  PMAEN = 0x60c
+                    0x060c                  _PMAEN = 0x60c
+                    0x060c                  _PMAENbits = 0x60c
+                    0x060e                  PMSTAT = 0x60e
+                    0x060e                  _PMSTAT = 0x60e
+                    0x060e                  _PMSTATbits = 0x60e
+                    0x0620                  ALRMVAL = 0x620
+                    0x0620                  _ALRMVAL = 0x620
+                    0x0622                  ALCFGRPT = 0x622
+                    0x0622                  _ALCFGRPT = 0x622
+                    0x0622                  _ALCFGRPTbits = 0x622
+                    0x0624                  RTCVAL = 0x624
+                    0x0624                  _RTCVAL = 0x624
+                    0x0626                  RCFGCAL = 0x626
+                    0x0626                  _RCFGCAL = 0x626
+                    0x0626                  _RCFGCALbits = 0x626
+                    0x0630                  CMCON = 0x630
+                    0x0630                  _CMCON = 0x630
+                    0x0630                  _CMCONbits = 0x630
+                    0x0632                  CVRCON = 0x632
+                    0x0632                  _CVRCON = 0x632
+                    0x0632                  _CVRCONbits = 0x632
+                    0x0640                  CRCCON = 0x640
+                    0x0640                  _CRCCON = 0x640
+                    0x0640                  _CRCCONbits = 0x640
+                    0x0642                  CRCXOR = 0x642
+                    0x0642                  _CRCXOR = 0x642
+                    0x0642                  _CRCXORbits = 0x642
+                    0x0644                  CRCDAT = 0x644
+                    0x0644                  _CRCDAT = 0x644
+                    0x0646                  CRCWDAT = 0x646
+                    0x0646                  _CRCWDAT = 0x646
+                    0x0680                  RPINR0 = 0x680
+                    0x0680                  _RPINR0 = 0x680
+                    0x0680                  _RPINR0bits = 0x680
+                    0x0682                  RPINR1 = 0x682
+                    0x0682                  _RPINR1 = 0x682
+                    0x0682                  _RPINR1bits = 0x682
+                    0x0686                  RPINR3 = 0x686
+                    0x0686                  _RPINR3 = 0x686
+                    0x0686                  _RPINR3bits = 0x686
+                    0x0688                  RPINR4 = 0x688
+                    0x0688                  _RPINR4 = 0x688
+                    0x0688                  _RPINR4bits = 0x688
+                    0x068e                  RPINR7 = 0x68e
+                    0x068e                  _RPINR7 = 0x68e
+                    0x068e                  _RPINR7bits = 0x68e
+                    0x0690                  RPINR8 = 0x690
+                    0x0690                  _RPINR8 = 0x690
+                    0x0690                  _RPINR8bits = 0x690
+                    0x0692                  RPINR9 = 0x692
+                    0x0692                  _RPINR9 = 0x692
+                    0x0692                  _RPINR9bits = 0x692
+                    0x0696                  RPINR11 = 0x696
+                    0x0696                  _RPINR11 = 0x696
+                    0x0696                  _RPINR11bits = 0x696
+                    0x06a4                  RPINR18 = 0x6a4
+                    0x06a4                  _RPINR18 = 0x6a4
+                    0x06a4                  _RPINR18bits = 0x6a4
+                    0x06a6                  RPINR19 = 0x6a6
+                    0x06a6                  _RPINR19 = 0x6a6
+                    0x06a6                  _RPINR19bits = 0x6a6
+                    0x06a8                  RPINR20 = 0x6a8
+                    0x06a8                  _RPINR20 = 0x6a8
+                    0x06a8                  _RPINR20bits = 0x6a8
+                    0x06aa                  RPINR21 = 0x6aa
+                    0x06aa                  _RPINR21 = 0x6aa
+                    0x06aa                  _RPINR21bits = 0x6aa
+                    0x06ac                  RPINR22 = 0x6ac
+                    0x06ac                  _RPINR22 = 0x6ac
+                    0x06ac                  _RPINR22bits = 0x6ac
+                    0x06ae                  RPINR23 = 0x6ae
+                    0x06ae                  _RPINR23 = 0x6ae
+                    0x06ae                  _RPINR23bits = 0x6ae
+                    0x06c0                  RPOR0 = 0x6c0
+                    0x06c0                  _RPOR0 = 0x6c0
+                    0x06c0                  _RPOR0bits = 0x6c0
+                    0x06c2                  RPOR1 = 0x6c2
+                    0x06c2                  _RPOR1 = 0x6c2
+                    0x06c2                  _RPOR1bits = 0x6c2
+                    0x06c4                  RPOR2 = 0x6c4
+                    0x06c4                  _RPOR2 = 0x6c4
+                    0x06c4                  _RPOR2bits = 0x6c4
+                    0x06c6                  RPOR3 = 0x6c6
+                    0x06c6                  _RPOR3 = 0x6c6
+                    0x06c6                  _RPOR3bits = 0x6c6
+                    0x06c8                  RPOR4 = 0x6c8
+                    0x06c8                  _RPOR4 = 0x6c8
+                    0x06c8                  _RPOR4bits = 0x6c8
+                    0x06ca                  RPOR5 = 0x6ca
+                    0x06ca                  _RPOR5 = 0x6ca
+                    0x06ca                  _RPOR5bits = 0x6ca
+                    0x06cc                  RPOR6 = 0x6cc
+                    0x06cc                  _RPOR6 = 0x6cc
+                    0x06cc                  _RPOR6bits = 0x6cc
+                    0x06ce                  RPOR7 = 0x6ce
+                    0x06ce                  _RPOR7 = 0x6ce
+                    0x06ce                  _RPOR7bits = 0x6ce
+                    0x0740                  RCON = 0x740
+                    0x0740                  _RCON = 0x740
+                    0x0740                  _RCONbits = 0x740
+                    0x0742                  OSCCON = 0x742
+                    0x0742                  _OSCCON = 0x742
+                    0x0742                  _OSCCONbits = 0x742
+                    0x0742                  OSCCONL = 0x742
+                    0x0742                  _OSCCONL = 0x742
+                    0x0743                  OSCCONH = 0x743
+                    0x0743                  _OSCCONH = 0x743
+                    0x0744                  CLKDIV = 0x744
+                    0x0744                  _CLKDIV = 0x744
+                    0x0744                  _CLKDIVbits = 0x744
+                    0x0748                  OSCTUN = 0x748
+                    0x0748                  _OSCTUN = 0x748
+                    0x0748                  _OSCTUNbits = 0x748
+                    0x0760                  NVMCON = 0x760
+                    0x0760                  _NVMCON = 0x760
+                    0x0760                  _NVMCONbits = 0x760
+                    0x0766                  NVMKEY = 0x766
+                    0x0766                  _NVMKEY = 0x766
+                    0x0770                  PMD1 = 0x770
+                    0x0770                  _PMD1 = 0x770
+                    0x0770                  _PMD1bits = 0x770
+                    0x0772                  PMD2 = 0x772
+                    0x0772                  _PMD2 = 0x772
+                    0x0772                  _PMD2bits = 0x772
+                    0x0774                  PMD3 = 0x774
+                    0x0774                  _PMD3 = 0x774
+                    0x0774                  _PMD3bits = 0x774
+                    0x0140                  IC1 = 0x140
+                    0x0140                  _IC1 = 0x140
+                    0x0144                  IC2 = 0x144
+                    0x0144                  _IC2 = 0x144
+                    0x0148                  IC3 = 0x148
+                    0x0148                  _IC3 = 0x148
+                    0x014c                  IC4 = 0x14c
+                    0x014c                  _IC4 = 0x14c
+                    0x0150                  IC5 = 0x150
+                    0x0150                  _IC5 = 0x150
+                    0x0180                  OC1 = 0x180
+                    0x0180                  _OC1 = 0x180
+                    0x0186                  OC2 = 0x186
+                    0x0186                  _OC2 = 0x186
+                    0x018c                  OC3 = 0x18c
+                    0x018c                  _OC3 = 0x18c
+                    0x0192                  OC4 = 0x192
+                    0x0192                  _OC4 = 0x192
+                    0x0198                  OC5 = 0x198
+                    0x0198                  _OC5 = 0x198
+                    0x0240                  SPI1 = 0x240
+                    0x0240                  _SPI1 = 0x240
+                    0x0260                  SPI2 = 0x260
+                    0x0260                  _SPI2 = 0x260
+                    0x0220                  UART1 = 0x220
+                    0x0220                  _UART1 = 0x220
+                    0x0230                  UART2 = 0x230
+                    0x0230                  _UART2 = 0x230
+START GROUP
+LOAD c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a
+LOAD c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a
+LOAD c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-c-elf.a
+END GROUP
+OUTPUT(./output/elf.elf elf32-pic30)
+LOAD jump_table
+LOAD default_isr
+LOAD heap
+LOAD data_init
+
+.debug_pubtypes
+                  0x0000c0        0x838
+ .debug_pubtypes
+                  0x0000c0        0x159 ./output/main.o
+ .debug_pubtypes
+                  0x000219         0x49 ./output/hooks.o
+ .debug_pubtypes
+                  0x000262        0x113 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_pubtypes
+                  0x000375         0x98 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_pubtypes
+                  0x00040d        0x1af ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_pubtypes
+                  0x0005bc         0x55 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_pubtypes
+                  0x000611        0x118 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_pubtypes
+                  0x000729        0x1cf ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+__c30_signature
+                  0x0008f8         0x7e
+ __c30_signature
+                  0x0008f8          0x6 ./output/main.o
+ __c30_signature
+                  0x0008fe          0x6 ./output/hooks.o
+ __c30_signature
+                  0x000904          0x6 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ __c30_signature
+                  0x00090a          0x6 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ __c30_signature
+                  0x000910          0x6 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ __c30_signature
+                  0x000916          0x6 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ __c30_signature
+                  0x00091c          0x6 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ __c30_signature
+                  0x000922          0x6 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+ __c30_signature
+                  0x000928          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
+ __c30_signature
+                  0x00092e          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
+ __c30_signature
+                  0x000934          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(fixunssfsi.eo)
+ __c30_signature
+                  0x00093a          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(floatunsisf.eo)
+ __c30_signature
+                  0x000940          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(funpack.eo)
+ __c30_signature
+                  0x000946          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(mulsf3.eo)
+ __c30_signature
+                  0x00094c          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(udivsi3.eo)
+ __c30_signature
+                  0x000952          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(floatundisf.eo)
+ __c30_signature
+                  0x000958          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(fpack.eo)
+ __c30_signature
+                  0x00095e          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(funpack2.eo)
+ __c30_signature
+                  0x000964          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\libm-elf.a(futil.eo)
+ __c30_signature
+                  0x00096a          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-c-elf.a(memcmp.XX_eo)
+ __c30_signature
+                  0x000970          0x6 c:/ecc-lab/embedded/compilers/xc16/bin/bin/../../lib\liblega-c-elf.a(memset.XX_eo)
+
+.nbss               0x0800         0x38
+ .nbss              0x0800         0x1e ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+                    0x0800                  _pxCurrentTCB
+ .nbss              0x081e          0xe ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+                    0x0822                  _pxCurrentCoRoutine
+ .nbss              0x082c          0xc ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+
+.ndata              0x0838          0x8
+ .ndata             0x0838          0x6 ./output/main.o
+                    0x0838                  ___dt
+                    0x083a                  _(short, float)
+                    0x083c                  _(long double *)
+ .ndata             0x083e          0x2 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+                    0x083e                  _uxCriticalNesting
+
+.bss                0x0840        0xc8c
+ .bss               0x0840        0xc00 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .bss               0x1440         0x5a ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .bss               0x149a         0x32 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+
+.heap               0x14cc        0xc18
+ .heap              0x14cc        0xc18 heap
+
+.ivt._T1Interrupt
+                  0x00001a          0x2
+ .ivt._T1Interrupt
+                  0x00001a          0x2 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+
+.config_JTAGEN    0x0083fe          0x2
+ .config_JTAGEN
+                  0x0083fe          0x2 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.config_IESO      0x0083fc          0x2
+ .config_IESO     0x0083fc          0x2 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.ivt._U1RXInterrupt
+                  0x00002a          0x2
+ .ivt._U1RXInterrupt
+                  0x00002a          0x2 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.ivt._U1TXInterrupt
+                  0x00002c          0x2
+ .ivt._U1TXInterrupt
+                  0x00002c          0x2 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.ivt._U2RXInterrupt
+                  0x000050          0x2
+ .ivt._U2RXInterrupt
+                  0x000050          0x2 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.ivt._U2TXInterrupt
+                  0x000052          0x2
+ .ivt._U2TXInterrupt
+                  0x000052          0x2 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+
+.const              0x8542         0x3c load address 0x000542  
+ .const             0x8542         0x20 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .const             0x8562         0x1a ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .const             0x857c          0x2 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+
+.text             0x00057e       0x19e0
+ .text            0x00057e        0xe92 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+                  0x00057e                  _xTaskCreate
+                  0x000738                  _vTaskDelete
+                  0x0007a2                  _vTaskDelayUntil
+                  0x00081e                  _vTaskDelay
+                  0x000848                  _uxTaskPriorityGet
+                  0x00086a                  _uxTaskPriorityGetFromISR
+                  0x00088c                  _vTaskPrioritySet
+                  0x000954                  _vTaskSuspend
+                  0x0009f8                  _vTaskResume
+                  0x000a56                  _xTaskResumeFromISR
+                  0x000ac0                  _vTaskStartScheduler
+                  0x000af6                  _vTaskEndScheduler
+                  0x000b0e                  _vTaskSuspendAll
+                  0x000b1a                  _xTaskResumeAll
+                  0x000bc4                  _xTaskGetTickCount
+                  0x000bd4                  _xTaskGetTickCountFromISR
+                  0x000be4                  _uxTaskGetNumberOfTasks
+                  0x000bec                  _pcTaskGetName
+                  0x000c06                  _xTaskIncrementTick
+                  0x000cee                  _vTaskSwitchContext
+                  0x000d72                  _vTaskPlaceOnEventList
+                  0x000d8c                  _vTaskPlaceOnUnorderedEventList
+                  0x000db0                  _xTaskRemoveFromEventList
+                  0x000e1e                  _vTaskRemoveFromUnorderedEventList
+                  0x000e72                  _vTaskSetTimeOutState
+                  0x000e8a                  _vTaskInternalSetTimeOutState
+                  0x000e9e                  _xTaskCheckForTimeOut
+                  0x000f0e                  _vTaskMissedYield
+                  0x000f18                  tasks.o:_prvIdleTask
+                  0x000fca                  _uxTaskResetEventItemValue
+                  0x000fe2                  _ulTaskNotifyTake
+                  0x00104e                  _xTaskNotifyWait
+                  0x00110a                  _xTaskGenericNotify
+                  0x0011f2                  _xTaskGenericNotifyFromISR
+                  0x0012f8                  _vTaskNotifyGiveFromISR
+                  0x001380                  _xTaskNotifyStateClear
+ .text            0x001410        0x2c8 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+                  0x001410                  _MCU_UnlockRegisters
+                  0x001422                  _MCU_LockRegisters
+                  0x001434                  _CLOCK_Initialize
+                  0x001462                  _IO_Initialize
+                  0x00147e                  _Uart1_Init
+                  0x00153a                  _Uart2_Init
+                  0x0015f6                  _UART1_Put
+                  0x00160e                  _UART1_Get
+                  0x001634                  _UART1_Write
+                  0x00165c                  _UART2_Put
+                  0x001674                  _UART2_Get
+                  0x00169a                  _UART2_Write
+                  0x0016c2                  _System_Init
+ .text            0x0016d8        0x2b8 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+                  0x0016d8                  _xCoRoutineCreate
+                  0x00176e                  _vCoRoutineAddToDelayedList
+                  0x0018b8                  _vCoRoutineSchedule
+                  0x001958                  _xCoRoutineRemoveFromEventList
+ .text            0x001990        0x250 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+                  0x001990                  _pvPortMalloc
+                  0x001a74                  _vPortFree
+                  0x001ac4                  _xPortGetFreeHeapSize
+                  0x001acc                  _xPortGetMinimumEverFreeHeapSize
+                  0x001ad4                  _vPortInitialiseBlocks
+ .text            0x001be0        0x128 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+                  0x001be0                  _vListInitialise
+                  0x001c12                  _vListInitialiseItem
+                  0x001c20                  _vListInsertEnd
+                  0x001c5c                  _vListInsert
+                  0x001cc0                  _uxListRemove
+ .text            0x001d08        0x122 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+                  0x001d08                  _pxPortInitialiseStack
+                  0x001d98                  _xPortStartScheduler
+                  0x001dc6                  _vPortEndScheduler
+                  0x001dcc                  _vApplicationSetupTickTimerInterrupt
+                  0x001df4                  _vPortEnterCritical
+                  0x001e0e                  _vPortExitCritical
+ .text            0x001e2a         0xe4 ./output/main.o
+                  0x001e2a                  _PWM_Init
+                  0x001ef6                  _main
+ .text            0x001f0e         0x50 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(portasm_PIC24.o)
+                  0x001f0e                  _vPortYield
+
+.dinit            0x001f5e         0x38
+ .dinit           0x001f5e         0x38 data_init
+
+.text             0x001f96         0x24
+ .text            0x001f96         0x24 ./output/hooks.o
+                  0x001f96                  _vApplicationIdleHook
+                  0x001f9e                  _vApplicationTickHook
+                  0x001fa4                  _vApplicationStackOverflowHook
