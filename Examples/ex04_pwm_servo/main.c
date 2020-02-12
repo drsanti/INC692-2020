@@ -12,7 +12,7 @@ void PWM_Init(void)
 	//*******************************************
 	//* Setup Timer2 for OC Clock source        *
 	//*******************************************
-	T2CONbits.TCKPS	 	= 0;		// 1:1 pre-scaler
+	//T2CONbits.TCKPS	 	= 0;		// 1:1 pre-scaler
 	T2CONbits.TCKPS		= 2;		// 1:64 prescaller
 	T2CONbits.T32	 	= 0;		// 16-bit Timer
 	T2CONbits.TCS	 	= 0;		// Internal clock (FOSC/2)
