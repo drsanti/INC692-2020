@@ -25,14 +25,16 @@ void PWM_Init(void)
 	//---------OC1 [A] ------------------------------------------------------
 	OC1R 				= 1;		// Hi
 	//OC1RS 			= __pr>>1;	// Lo
-	OC1RS 				= __pr*(10.0/100.0);
+	OC1RS 				= __pr*(99.0/100.0);
 	OC1CONbits.OCM		= 5;		// Dual Compare, Continous pulse output
 	OC1CONbits.OCTSEL 	= 0;		// Timer2 is the clock source for Output Compare x
 
 
 	//---------OC2 [B] ------------------------------------------------------
-	OC2R 				= OC1RS + __dt + 1 ;
-	OC2RS 				= __pr   - __dt;
+	// OC2R 			= OC1RS + __dt + 1 ;
+	// OC2RS 			= __pr   - __dt;
+	OC2R 				= 1;
+	OC2RS 				= __pr*(5.0/100.0);
 	OC2CONbits.OCM		= 5;
 	OC2CONbits.OCTSEL 	= 0;
 
@@ -77,18 +79,6 @@ int main(void)
 
 
     PWM_Init();
-
-
-	TRISBbits.TRISB4 = 0;
-	TRISBbits.TRISB5 = 0;
-
-	TRISBbits.TRISB6 = 0;
-	TRISBbits.TRISB7 = 0;
-
-	LATBbits.LATB4 = 0;
-	LATBbits.LATB5 = 1;
-	LATBbits.LATB6 = 0;
-	LATBbits.LATB7 = 1;
 
 
 	while(1);
