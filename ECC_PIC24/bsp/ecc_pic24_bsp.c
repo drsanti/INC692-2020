@@ -1,26 +1,38 @@
+/*
+ ***************************************************************
+ * File Name: ecc_pic24_bsp.c
+ ***************************************************************
+ * Asst.Prof.Dr.Santi Nuratch
+ * Embedded Computing and Control Laboratory (ECC-Lab)
+ * Department of Control System and Instrumentation Engineering
+ * Faculty of Engineering, KMUTT
+ * Update: 13 February, 2020
+ ***************************************************************
+ */
+
 #include "ecc_pic24_bsp.h"
 
 // CONFIG2
-#pragma config POSCMOD = NONE //Primary Oscillator Select->Primary oscillator disabled
-#pragma config I2C1SEL = PRI  //I2C1 Pin Location Select->Use default SCL1/SDA1 pins
-#pragma config IOL1WAY = ON   //IOLOCK Protection->Once IOLOCK is set, cannot be changed
-#pragma config OSCIOFNC = OFF //Primary Oscillator Output Function->OSC2/CLKO/RC15 functions as CLKO (FOSC/2)
-#pragma config FCKSM = CSDCMD //Clock Switching and Monitor->Clock switching and Fail-Safe Clock Monitor are disabled
-#pragma config FNOSC = FRCPLL //Oscillator Select->Fast RC Oscillator with PLL module (FRCPLL)
-#pragma config SOSCSEL = SOSC //Sec Oscillator Select->Default Secondary Oscillator (SOSC)
-#pragma config WUTSEL = LEG   //Wake-up timer Select->Legacy Wake-up Timer
-#pragma config IESO = ON      //Internal External Switch Over Mode->IESO mode (Two-Speed Start-up) enabled
+#pragma config POSCMOD  = NONE      // Primary Oscillator Select->Primary oscillator disabled
+#pragma config I2C1SEL  = PRI       // I2C1 Pin Location Select->Use default SCL1/SDA1 pins
+#pragma config IOL1WAY  = OFF       // ON   //IOLOCK Protection->Once IOLOCK is set, cannot be changed
+#pragma config OSCIOFNC = OFF       // Primary Oscillator Output Function->OSC2/CLKO/RC15 functions as CLKO (FOSC/2)
+#pragma config FCKSM    = CSDCMD    // Clock Switching and Monitor->Clock switching and Fail-Safe Clock Monitor are disabled
+#pragma config FNOSC    = FRCPLL    // Oscillator Select->Fast RC Oscillator with PLL module (FRCPLL)
+#pragma config SOSCSEL  = SOSC      // Sec Oscillator Select->Default Secondary Oscillator (SOSC)
+#pragma config WUTSEL   = LEG       // Wake-up timer Select->Legacy Wake-up Timer
+#pragma config IESO     = ON        // Internal External Switch Over Mode->IESO mode (Two-Speed Start-up) enabled
 
 // CONFIG1
-#pragma config WDTPS = PS32768 //Watchdog Timer Postscaler->1:32768
-#pragma config FWPSA = PR128   //WDT Prescaler->Prescaler ratio of 1:128
-#pragma config WINDIS = ON     //Watchdog Timer Window->Standard Watchdog Timer enabled,(Windowed-mode is disabled)
-#pragma config FWDTEN = OFF    //Watchdog Timer Enable->Watchdog Timer is disabled
-#pragma config ICS = PGx3      //Comm Channel Select->Emulator EMUC3/EMUD3 pins are shared with PGC3/PGD3
-#pragma config BKBUG = OFF     //Background Debug->Device resets into Operational mode
-#pragma config GWRP = OFF      //General Code Segment Write Protect->Writes to program memory are allowed
-#pragma config GCP = OFF       //General Code Segment Code Protect->Code protection is disabled
-#pragma config JTAGEN = OFF    //JTAG Port Enable->JTAG port is disabled
+#pragma config WDTPS    = PS32768   // Watchdog Timer Postscaler->1:32768
+#pragma config FWPSA    = PR128     // WDT Prescaler->Prescaler ratio of 1:128
+#pragma config WINDIS   = ON        // Watchdog Timer Window->Standard Watchdog Timer enabled,(Windowed-mode is disabled)
+#pragma config FWDTEN   = OFF       // Watchdog Timer Enable->Watchdog Timer is disabled
+#pragma config ICS      = PGx3      // Comm Channel Select->Emulator EMUC3/EMUD3 pins are shared with PGC3/PGD3
+#pragma config BKBUG    = OFF       // Background Debug->Device resets into Operational mode
+#pragma config GWRP     = OFF       // General Code Segment Write Protect->Writes to program memory are allowed
+#pragma config GCP      = OFF       // General Code Segment Code Protect->Code protection is disabled
+#pragma config JTAGEN   = OFF       // JTAG Port Enable->JTAG port is disabled
 
 /* UnLock IO-Mapping */
 void MCU_UnlockRegisters(void)
@@ -48,10 +60,10 @@ void MCU_LockRegisters(void)
 /*
 void MCU_Init(void)
 {
-    CLKDIVbits.RCDIV = 0; // Post-scaler, 8MHz/1 = 8MHz (divide by 1), used for FRC Post-scaler Select bits
-    CLKDIVbits.DOZEN = 0; // Enable DOZE
-    CLKDIVbits.DOZE = 0;
-    AD1PCFG = 0xFFFF; // Disable all AN pins
+    CLKDIVbits.RCDIV    = 0;        // Post-scaler, 8MHz/1 = 8MHz (divide by 1), used for FRC Post-scaler Select bits
+    CLKDIVbits.DOZEN    = 0;        // Enable DOZE
+    CLKDIVbits.DOZE     = 0;
+    AD1PCFG             = 0xFFFF;   // Disable all AN pins
 }
 */
 
@@ -160,8 +172,9 @@ void Uart1_Init(uint32_t baurate)
     //####################################
     //#      Assign U1TX To Pin RP13     #
     //####################################
-    RPOR6bits.RP13R = 3;
+    RPOR6bits.RP13R   = 3;
     TRISBbits.TRISB13 = 0;
+
 
     //####################################
     //#          Lock Registers          #
@@ -180,19 +193,19 @@ void Uart1_Init(uint32_t baurate)
     //####################################
     //#   Set UART1 as Normal Rx/Tx      #
     //####################################
-    U1MODEbits.UARTEN = 1; // UART1 Enable
-    U1MODEbits.USIDL = 0;  // Continue module operation in Idle mode
-    U1MODEbits.IREN = 0;   // IrDA encoder and decoder disabled
-    U1MODEbits.RTSMD = 0;  // UxRTS pin in Flow Control mode
-    U1MODEbits.UEN = 0;    // U1CTS and U1RTS/BCLKx pins controlled by PORT latches
-    U1MODEbits.WAKE = 0;   // No wake-up enabled
-    U1MODEbits.LPBACK = 0; // Loopback mode is disabled
-    U1MODEbits.ABAUD = 0;  // Baud rate measurement disabled or completed
-    U1MODEbits.RXINV = 0;  // U1RX Idle state is ‘1’
+    U1MODEbits.UARTEN   = 1; // UART1 Enable
+    U1MODEbits.USIDL    = 0;  // Continue module operation in Idle mode
+    U1MODEbits.IREN     = 0;   // IrDA encoder and decoder disabled
+    U1MODEbits.RTSMD    = 0;  // UxRTS pin in Flow Control mode
+    U1MODEbits.UEN      = 0;    // U1CTS and U1RTS/BCLKx pins controlled by PORT latches
+    U1MODEbits.WAKE     = 0;   // No wake-up enabled
+    U1MODEbits.LPBACK   = 0; // Loopback mode is disabled
+    U1MODEbits.ABAUD    = 0;  // Baud rate measurement disabled or completed
+    U1MODEbits.RXINV    = 0;  // U1RX Idle state is ‘1’
     //U1MODEbits.BRGH		= (UART1_FASTSPEED>0)?1:0;	// BRG generates 16 clocks per bit period (16x baud clock, Standard mode)
-    U1MODEbits.BRGH = fast_speed;
-    U1MODEbits.PDSEL = 0; // 8-bit data, no parity
-    U1MODEbits.STSEL = 0; // One Stop bit
+    U1MODEbits.BRGH     = fast_speed;
+    U1MODEbits.PDSEL    = 0; // 8-bit data, no parity
+    U1MODEbits.STSEL    = 0; // One Stop bit
 
     //####################################
     //#      Config UART's baudrate      #
@@ -208,8 +221,8 @@ void Uart1_Init(uint32_t baurate)
     //####################################
     //#     Enable UART Transmission     #
     //####################################
-    U1STAbits.UTXEN = 1;  // Transmit enabled
-    U1STAbits.UTXBRK = 0; // Sync Break transmission disabled or completed
+    U1STAbits.UTXEN  = 1;   // Transmit enabled
+    U1STAbits.UTXBRK = 0;   // Sync Break transmission disabled or completed
 
     U1STAbits.UTXISEL1 = 0; // Interrupt when a character is transferred to the Transmit Shift Register (TSR) and as a result, the transmit buffer becomes empty
     U1STAbits.UTXISEL0 = 0;
@@ -237,7 +250,7 @@ void Uart2_Init(uint32_t baurate)
     //####################################
     //#      Assign U2TX To Pin RP15     #
     //####################################
-    RPOR7bits.RP15R = 5;
+    RPOR7bits.RP15R   = 5;
     TRISBbits.TRISB15 = 0;
 
     MCU_LockRegisters(); //## Required
@@ -245,19 +258,19 @@ void Uart2_Init(uint32_t baurate)
     //####################################
     //#   Set UART2 as Normal Rx/Tx      #
     //####################################
-    U2MODEbits.UARTEN = 1; // UART2 Enable
-    U2MODEbits.USIDL = 0;  // Continue module operation in Idle mode
-    U2MODEbits.IREN = 0;   // IrDA encoder and decoder disabled
-    U2MODEbits.RTSMD = 0;  // UxRTS pin in Flow Control mode
-    U2MODEbits.UEN = 0;    // U2CTS and U2RTS/BCLKx pins controlled by PORT latches
-    U2MODEbits.WAKE = 0;   // No wake-up enabled
-    U2MODEbits.LPBACK = 0; // Loopback mode is disabled
-    U2MODEbits.ABAUD = 0;  // Baud rate measurement disabled or completed
-    U2MODEbits.RXINV = 0;  // U2RX Idle state is ‘1’
+    U2MODEbits.UARTEN   = 1;    // UART2 Enable
+    U2MODEbits.USIDL    = 0;    // Continue module operation in Idle mode
+    U2MODEbits.IREN     = 0;    // IrDA encoder and decoder disabled
+    U2MODEbits.RTSMD    = 0;    // UxRTS pin in Flow Control mode
+    U2MODEbits.UEN      = 0;    // U2CTS and U2RTS/BCLKx pins controlled by PORT latches
+    U2MODEbits.WAKE     = 0;    // No wake-up enabled
+    U2MODEbits.LPBACK   = 0;    // Loopback mode is disabled
+    U2MODEbits.ABAUD    = 0;    // Baud rate measurement disabled or completed
+    U2MODEbits.RXINV    = 0;    // U2RX Idle state is ‘1’
     //U2MODEbits.BRGH		= (UART2_FASTSPEED>0)?1:0;	// BRG generates 16 clocks per bit period (16x baud clock, Standard mode)
-    U2MODEbits.BRGH = fast_speed;
-    U2MODEbits.PDSEL = 0; // 8-bit data, no parity
-    U2MODEbits.STSEL = 0; // One Stop bit
+    U2MODEbits.BRGH     = fast_speed;
+    U2MODEbits.PDSEL    = 0;    // 8-bit data, no parity
+    U2MODEbits.STSEL    = 0;    // One Stop bit
 
     //####################################
     //#      Config UART's baudrate      #
@@ -273,8 +286,8 @@ void Uart2_Init(uint32_t baurate)
     //####################################
     //#     Enable UART Transmission     #
     //####################################
-    U2STAbits.UTXEN = 1;  // Transmit enabled
-    U2STAbits.UTXBRK = 0; // Sync Break transmission disabled or completed
+    U2STAbits.UTXEN  = 1;   // Transmit enabled
+    U2STAbits.UTXBRK = 0;   // Sync Break transmission disabled or completed
 
     U2STAbits.UTXISEL1 = 0; // Interrupt when a character is transferred to the Transmit Shift Register (TSR) and as a result, the transmit buffer becomes empty
     U2STAbits.UTXISEL0 = 0;
@@ -320,16 +333,14 @@ void UART2_Get(char *c)
     if (U2STAbits.OERR != 0)
         U2STAbits.OERR = 0;
 
-    while (!U2STAbits.URXDA)
-        ;
+    while (!U2STAbits.URXDA);
     *c = U2RXREG;
 }
 void UART2_Write(char *str)
 {
     while (*str != 0)
     {
-        while (U2STAbits.UTXBF)
-            ;
+        while (U2STAbits.UTXBF);
         U2TXREG = *str;
         str++;
     }
@@ -343,11 +354,38 @@ void System_Init(void)
     Uart1_Init(115200 * 1);
     Uart2_Init(115200 * 1);
 
-    //
-    // printf() to UART1
-    //
-    // REF: https://microchipdeveloper.com/faq:74
+    LED0_LAT = LED1_LAT = LED2_LAT = LED3_LAT = 1;
 
-    __C30_UART = 1; // UART1
-    //__C30_UART = 2; // UART2
+}
+
+/**
+ * Print the given string to serial port (UART1)
+ * string: A null-terminated string to be printed.
+ */
+void  rtl_print(const char * string) {
+    while (*string != 0)
+    {
+        while (U1STAbits.UTXBF);
+        U1TXREG = *string;
+        string++;
+    }
+}
+
+/**
+ * Print the given string to serial port (UART1)
+ * string: A null-terminated string to be printed.
+ */
+void rtl_printf(const char *format, ...) {
+    char buff[128];
+    va_list args;
+    va_start(args, format);
+    vsprintf(buff, format, args);
+    va_end(args);
+    buff[127] = 0;
+    while (*buff != 0)
+    {
+        while (U1STAbits.UTXBF);
+        U1TXREG = *buff;
+        buff++;
+    }
 }

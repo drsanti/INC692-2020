@@ -1,3 +1,16 @@
+/*
+ ***************************************************************
+ * File Name: ecc_pic24_bsp.h
+ ***************************************************************
+ * Asst.Prof.Dr.Santi Nuratch
+ * Embedded Computing and Control Laboratory (ECC-Lab)
+ * Department of Control System and Instrumentation Engineering
+ * Faculty of Engineering, KMUTT
+ * Update: 13 February, 2020
+ ***************************************************************
+ */
+
+
 
 #ifndef __ECC_PIC24_BSP_H__
 #define __ECC_PIC24_BSP_H__
@@ -42,6 +55,11 @@
 #define LED2_PORT PORTBbits.RB2
 #define LED3_PORT PORTBbits.RB3
 
+void MCU_UnlockRegisters(void);
+
+void MCU_LockRegisters(void);
+
+
 void System_Init(void);
 void CLOCK_Initialize(void);
 void IO_Initialize(void);
@@ -55,5 +73,19 @@ void UART1_Write(char *str);
 void UART2_Put(char c);
 void UART2_Get(char *c);
 void UART2_Write(char *str);
+
+
+
+/**
+ * Print the given string to serial port (UART1)
+ * string: A null-terminated string to be printed.
+ */
+void  rtl_print(const char * string);
+
+/**
+ * Print the given string to serial port (UART1)
+ * string: A null-terminated string to be printed.
+ */
+void rtl_printf(const char *format, ...);
 
 #endif // __ECC_PIC24_BSP_H__

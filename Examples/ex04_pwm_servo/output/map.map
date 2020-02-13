@@ -97,11 +97,11 @@ section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
 .text                        0xc00               0x344           0x4e6  (1254)
 .const                       0xf44                0x3c            0x5a  (90)
-.text                        0xf80              0x1a12          0x271b  (10011)
-.dinit                      0x2992                0x38            0x54  (84)
-.text                       0x29ca                0x24            0x36  (54)
+.text                        0xf80              0x1a0a          0x270f  (9999)
+.dinit                      0x298a                0x38            0x54  (84)
+.text                       0x29c2                0x24            0x36  (54)
 
-                 Total "program" memory used (bytes):         0x2ce5  (11493) 25%
+                 Total "program" memory used (bytes):         0x2cd9  (11481) 25%
 
 
 "data" Memory  [Origin = 0x800, Length = 0x2000]
@@ -238,11 +238,11 @@ External Symbols in Program Memory (by address):
                   0x002834                  _vPortEnterCritical
                   0x00284e                  _vPortExitCritical
                   0x00286a                  _PWM_Init
-                  0x00293a                  _main
-                  0x002942                  _vPortYield
-                  0x0029ca                  _vApplicationIdleHook
-                  0x0029d2                  _vApplicationTickHook
-                  0x0029d8                  _vApplicationStackOverflowHook
+                  0x002932                  _main
+                  0x00293a                  _vPortYield
+                  0x0029c2                  _vApplicationIdleHook
+                  0x0029ca                  _vApplicationTickHook
+                  0x0029d0                  _vApplicationStackOverflowHook
 
 External Symbols in Program Memory (by name):
 
@@ -281,7 +281,7 @@ External Symbols in Program Memory (by name):
                   0x000eea                  __funpack2
                   0x000c3e                  __psv_init
                   0x000c02                  __resetPRI
-                  0x00293a                  _main
+                  0x002932                  _main
                   0x000f1a                  _memcmp
                   0x000f36                  _memset
                   0x0015ee                  _pcTaskGetName
@@ -293,9 +293,9 @@ External Symbols in Program Memory (by name):
                   0x00124a                  _uxTaskPriorityGet
                   0x00126c                  _uxTaskPriorityGetFromISR
                   0x0019cc                  _uxTaskResetEventItemValue
-                  0x0029ca                  _vApplicationIdleHook
-                  0x0029d8                  _vApplicationStackOverflowHook
-                  0x0029d2                  _vApplicationTickHook
+                  0x0029c2                  _vApplicationIdleHook
+                  0x0029d0                  _vApplicationStackOverflowHook
+                  0x0029ca                  _vApplicationTickHook
                   0x0021ae                  _vCoRoutineAddToDelayedList
                   0x0022f8                  _vCoRoutineSchedule
                   0x002620                  _vListInitialise
@@ -307,7 +307,7 @@ External Symbols in Program Memory (by name):
                   0x00284e                  _vPortExitCritical
                   0x0024b4                  _vPortFree
                   0x002514                  _vPortInitialiseBlocks
-                  0x002942                  _vPortYield
+                  0x00293a                  _vPortYield
                   0x001220                  _vTaskDelay
                   0x0011a4                  _vTaskDelayUntil
                   0x00113a                  _vTaskDelete
@@ -459,16 +459,16 @@ __CONFIG1
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x658e
+.debug_info       0x000000       0x65cc
  *(.debug_info)
- .debug_info      0x000000        0xc32 ./output/main.o
- .debug_info      0x000c32        0x34c ./output/hooks.o
- .debug_info      0x000f7e        0x93c ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
- .debug_info      0x0018ba        0x466 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
- .debug_info      0x001d20       0x1bad ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
- .debug_info      0x0038cd        0x544 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
- .debug_info      0x003e11        0xb26 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
- .debug_info      0x004937       0x1c57 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+ .debug_info      0x000000        0xc51 ./output/main.o
+ .debug_info      0x000c51        0x36b ./output/hooks.o
+ .debug_info      0x000fbc        0x93c ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_info      0x0018f8        0x466 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_info      0x001d5e       0x1bad ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_info      0x00390b        0x544 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_info      0x003e4f        0xb26 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_info      0x004975       0x1c57 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0xbab
@@ -482,16 +482,16 @@ __CONFIG1
  .debug_abbrev    0x00082f        0x1e3 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
  .debug_abbrev    0x000a12        0x199 ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
 
-.debug_line       0x000000        0xee6
+.debug_line       0x000000        0xee5
  *(.debug_line)
- .debug_line      0x000000         0xfa ./output/main.o
- .debug_line      0x0000fa        0x10d ./output/hooks.o
- .debug_line      0x000207        0x20d ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
- .debug_line      0x000414        0x154 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
- .debug_line      0x000568        0x4de ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
- .debug_line      0x000a46        0x140 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
- .debug_line      0x000b86        0x1b3 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
- .debug_line      0x000d39        0x1ad ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
+ .debug_line      0x000000         0xf9 ./output/main.o
+ .debug_line      0x0000f9        0x10d ./output/hooks.o
+ .debug_line      0x000206        0x20d ../../ECC_PIC24/libs/ecc_pic24_rtos.a(croutine.o)
+ .debug_line      0x000413        0x154 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(list.o)
+ .debug_line      0x000567        0x4de ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
+ .debug_line      0x000a45        0x140 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
+ .debug_line      0x000b85        0x1b3 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(port.o)
+ .debug_line      0x000d38        0x1ad ../../ECC_PIC24/libs/ecc_pic24_bsp.a(ecc_pic24_bsp.o)
 
 .debug_frame      0x000000        0xac2
  *(.debug_frame)
@@ -1527,7 +1527,7 @@ __c30_signature
  .const             0x8f64         0x1a ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
  .const             0x8f7e          0x2 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(heap_4.o)
 
-.text             0x000f80       0x1a12
+.text             0x000f80       0x1a0a
  .text            0x000f80        0xe92 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(tasks.o)
                   0x000f80                  _xTaskCreate
                   0x00113a                  _vTaskDelete
@@ -1603,17 +1603,17 @@ __c30_signature
                   0x00280c                  _vApplicationSetupTickTimerInterrupt
                   0x002834                  _vPortEnterCritical
                   0x00284e                  _vPortExitCritical
- .text            0x00286a         0xd8 ./output/main.o
+ .text            0x00286a         0xd0 ./output/main.o
                   0x00286a                  _PWM_Init
-                  0x00293a                  _main
- .text            0x002942         0x50 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(portasm_PIC24.o)
-                  0x002942                  _vPortYield
+                  0x002932                  _main
+ .text            0x00293a         0x50 ../../ECC_PIC24/libs/ecc_pic24_rtos.a(portasm_PIC24.o)
+                  0x00293a                  _vPortYield
 
-.dinit            0x002992         0x38
- .dinit           0x002992         0x38 data_init
+.dinit            0x00298a         0x38
+ .dinit           0x00298a         0x38 data_init
 
-.text             0x0029ca         0x24
- .text            0x0029ca         0x24 ./output/hooks.o
-                  0x0029ca                  _vApplicationIdleHook
-                  0x0029d2                  _vApplicationTickHook
-                  0x0029d8                  _vApplicationStackOverflowHook
+.text             0x0029c2         0x24
+ .text            0x0029c2         0x24 ./output/hooks.o
+                  0x0029c2                  _vApplicationIdleHook
+                  0x0029ca                  _vApplicationTickHook
+                  0x0029d0                  _vApplicationStackOverflowHook
