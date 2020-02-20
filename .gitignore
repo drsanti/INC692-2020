@@ -3,3 +3,6 @@ MPLAB/debug
 MPLAB/dist
 ECC_PIC24/output
 *.bat
+*.workspace
+*.pdsbak
+*.o
