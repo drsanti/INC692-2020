@@ -6,3 +6,4 @@ ECC_PIC24/output
 *.workspace
 *.pdsbak
 *.o
+*.~vsdx
